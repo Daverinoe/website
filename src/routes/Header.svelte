@@ -24,9 +24,8 @@
 	</div>
 	<div class="menu">
 		<ul class={showMenu ? "show" : ""}>
-			<li><a href="#about">About</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/projects">Projects</a></li>
 		</ul>
 		<div
 			class="hamburger"
