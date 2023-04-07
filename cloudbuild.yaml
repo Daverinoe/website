@@ -15,6 +15,6 @@
    - '--image'
    - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
    - '--region'
-   - 'europe-west3'
+   - 'europe-north1'
  images:
  - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
