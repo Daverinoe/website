@@ -49,7 +49,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: #fff;
+		background-color: linear-gradient(180deg, rgb(44, 44, 44), rgba(44, 44, 44, 0));
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		z-index: 1000;
 		transition: transform 0.5s ease-in-out;
