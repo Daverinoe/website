@@ -5,7 +5,7 @@
 	let projects = [
 		{
 			title: "Morning coffee",
-			link: "/projects/morning-coffee",
+			link: "https://daverinoe.itch.io/morning-coffee",
 			image: "",
 			alt: "A happy canvas bag of coffee with a bloodstain in the corner.",
 			description: "A brief parable about coffee.",
@@ -13,7 +13,7 @@
 		},
 		{
 			title: "Rail Assembly",
-			link: "/projects/rail-assembly",
+			link: "https://daverinoe.itch.io/rail-assembly",
 			image: "",
 			alt: "Train waiting on rails.",
 			description:
@@ -22,7 +22,7 @@
 		},
 		{
 			title: "Pizza Delivery",
-			link: "/projects/pizza-delivery",
+			link: "https://daverinoe.itch.io/pizza-delivery",
 			image: "",
 			alt: "Pizza box with a logo of a goat on it.",
 			description:
@@ -31,7 +31,7 @@
 		},
 		{
 			title: "Alarm Cluck",
-			link: "/projects/alarm-cluck",
+			link: "https://daverinoe.itch.io/alarm-cluck",
 			image: "",
 			alt: "A pixel art rooster.",
 			description:
@@ -40,7 +40,7 @@
 		},
 		{
 			title: "God's Gambit",
-			link: "/projects/gods-gambit",
+			link: "https://velopman.itch.io/gods-gambit",
 			image: "",
 			alt: "A fresco of an Incan god.",
 			description:
@@ -49,7 +49,7 @@
 		},
 		{
 			title: "Unfinished bull game",
-			link: "/projects/uubtgwytroattdtsy",
+			link: "https://daverinoe.itch.io/uubtgwueuraattdtsy",
 			image: "",
 			alt: "A low-poly bull.",
 			description:
@@ -58,7 +58,7 @@
 		},
 		{
 			title: "The Huggen",
-			link: "/projects/the-huggen",
+			link: "https://velopman.itch.io/the-huggen",
 			image: "",
 			alt: "A squid with its tentacles outreached.",
 			description:
@@ -67,7 +67,7 @@
 		},
 		{
 			title: "PHD: Printer Hate Department",
-			link: "/projects/printer-hate-department",
+			link: "https://liioni.itch.io/phd",
 			image: "",
 			alt: "A pixel art man",
 			description: "Debug the world with this puzzle platformer!",
@@ -75,7 +75,7 @@
 		},
 		{
 			title: "No Thyme to Waste",
-			link: "/projects/no-thyme-to-waste",
+			link: "https://daverinoe.itch.io/no-thyme-to-waste",
 			image: "",
 			alt: "A pixel art fish",
 			description:
