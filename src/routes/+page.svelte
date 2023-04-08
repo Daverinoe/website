@@ -123,7 +123,7 @@
 
 			<p>
 				So where's the proof? The proof, dear readers, is in my <a
-					href="/projects">Projects</a
+					href="#projects">Projects</a
 				> page. There, you'll find pages on every project I worked on, and
 				a brief post-mortem of the challenges I overcame, and the problems
 				I didn't. These are, one and all (as of writing on March 2023), game-jam
