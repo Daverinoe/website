@@ -1,36 +1,202 @@
 <script>
+	import ProjectCard from "./ProjectCard.svelte";
+	import YoutubeBackground from "./YoutubeBackground.svelte";
+
+	let projects = [
+		{
+			title: "Morning coffee",
+			link: "/projects/morning-coffee",
+			image: "",
+			alt: "A happy canvas bag of coffee with a bloodstain in the corner.",
+			description: "A brief parable about coffee.",
+			// Add more information if needed
+		},
+		{
+			title: "Rail Assembly",
+			link: "/projects/rail-assembly",
+			image: "",
+			alt: "Train waiting on rails.",
+			description:
+				"Move track pieces in front of your train to prevent disaster.",
+			// Add more information if needed
+		},
+		{
+			title: "Pizza Delivery",
+			link: "/projects/pizza-delivery",
+			image: "",
+			alt: "Pizza box with a logo of a goat on it.",
+			description:
+				"A totally normal game about delivering a pizza to a hedge maze at night.",
+			// Add more information if needed
+		},
+		{
+			title: "Alarm Cluck",
+			link: "/projects/alarm-cluck",
+			image: "",
+			alt: "A pixel art rooster.",
+			description:
+				"Waking the farm is your duty in this Jump King clone.",
+			// Add more information if needed
+		},
+		{
+			title: "God's Gambit",
+			link: "/projects/gods-gambit",
+			image: "",
+			alt: "A fresco of an Incan god.",
+			description:
+				"Take on the Gods to become the True God of Gaming in this twist on a classic.",
+			// Add more information if needed
+		},
+		{
+			title: "Unfinished bull game",
+			link: "/projects/uubtgwytroattdtsy",
+			image: "",
+			alt: "A low-poly bull.",
+			description:
+				"Take revenge on a thief who dared to steal from you in a pottery store.",
+			// Add more information if needed
+		},
+		{
+			title: "The Huggen",
+			link: "/projects/the-huggen",
+			image: "",
+			alt: "A squid with its tentacles outreached.",
+			description:
+				"Spread your love to the ships above in this QWOP inspired game.",
+			// Add more information if needed
+		},
+		{
+			title: "PHD: Printer Hate Department",
+			link: "/projects/printer-hate-department",
+			image: "",
+			alt: "A pixel art man",
+			description: "Debug the world with this puzzle platformer!",
+			// Add more information if needed
+		},
+		{
+			title: "No Thyme to Waste",
+			link: "/projects/no-thyme-to-waste",
+			image: "",
+			alt: "A pixel art fish",
+			description:
+				"Save the world one sale at a time in this aquaponics inspired game.",
+			// Add more information if needed
+		},
+	];
+
+	let selectedProject = null;
+
+	function handleCardClick(id) {
+		selectedProject = id === selectedProject ? null : id;
+	}
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Daverinoe's home page" />
-</svelte:head>
+<YoutubeBackground />
+<div class="spacer" />
+<div class="content">
+	<section id="about">
+		<div class="text-column">
+			<h1>Who is Daverinoe?</h1>
 
-<section>
-	<h1>
-		Welcome to the landing page!
-	</h1>
+			<p>
+				I have had a rather round about path in life. My biggest career
+				accomplishments so far have been graduating with a PhD in
+				computational quantum information, then moving into a software
+				engineer position. But over the past year or two, I've really
+				decided on what my hobby should be:
+			</p>
 
-	<h2>
-		Showing off some skills.
-	</h2>
+			<p class="shaky">GAME DEVELOPMENT!</p>
 
-	<p>
-		David, what are you on about? This is just a website.
-		You are correct! However, this website is made using <a href="https://kit.svelte.dev/">Sveltekit and Vite</a>, then <a href="https://www.docker.com/">Docker</a>ized my app, uploaded the container to <a href="https://cloud.google.com/">Google Cloud Services</a>, where I've bought and linked a domain name.
-	</p>
-</section>
+			<p>
+				I, like many many others, decided "Hey, games are fun to play! I
+				bet they're fun to make!" and gave it a go. To my absolute
+				delight, the challenges involved in game development are
+				incredibly fun to work on, and give me a real sense of
+				satisfaction to solve. From gameplay programming and making the
+				perfect feeling character controller, creating audio solutions
+				that meet the needs of the game, to bashing my head repeatedly
+				against the unyielding brick wall that is shader code.
+			</p>
+
+			<p>I enjoy all of it.</p>
+
+			<p>
+				So where's the proof? The proof, dear readers, is in my <a
+					href="/projects">Projects</a
+				> page. There, you'll find pages on every project I worked on, and
+				a brief post-mortem of the challenges I overcame, and the problems
+				I didn't. These are, one and all (as of writing on March 2023), game-jam
+				games. A couple of my projects have promise to become full-fledged
+				releases with proper polish, but that remains to be seen.
+			</p>
+
+			<p>
+				So enjoy, dear reader (and dare I say, friend?). I hope the walk
+				through my game development career is enlightening for you!
+			</p>
+		</div>
+	</section>
+
+	<section id="projects">
+		<div class="games">
+			{#each projects as project, index}
+				<ProjectCard
+					{project}
+					id={index}
+					selected={selectedProject === index}
+					on:click={() => handleCardClick(index)}
+				/>
+			{/each}
+		</div>
+	</section>
+
+	<section id="contact" />
+</div>
+{#if selectedProject !== null}
+	<div
+		class="overlay"
+		tabindex="-1"
+		on:click={() => handleCardClick(null)}
+		on:keydown={(event) => event.key === "Enter" && handleCardClick(null)}
+	/>
+{/if}
 
 <style>
-	section {
+	.content {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-around;
 		align-items: center;
-		flex: 0.6;
+		color: white;
+		text-align: center;
+		background-color: #4a6d8c; /* Add your desired background color here */
+		min-height: 100vh; /* Make sure the content takes up at least the full viewport height */
+		width: 100%; /* Make the content take up the full width of the viewport */
 	}
 
-	h1 {
+	.spacer {
+		height: 66.67vh;
+	}
+
+	.games {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100%;
+		z-index: 9;
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.5
+		); /* Add a semi-transparent background color */
 	}
 </style>

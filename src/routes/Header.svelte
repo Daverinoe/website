@@ -1,6 +1,6 @@
 <script>
 	let showMenu = false;
- 	 let isAnimated = false;
+	let isAnimated = false;
 
 	function toggleMenu() {
 		showMenu = !showMenu;
@@ -12,11 +12,24 @@
 		}
 	}
 
-	 // Animate the header after one second
-	 setTimeout(() => {
+	// Close the menu when the user clicks outside of it
+	function handleClick(event) {
+		if (showMenu && !event.target.closest(".menu")) {
+			showMenu = false;
+		}
+	}
+
+	// Animate the header after one second
+	setTimeout(() => {
 		isAnimated = true;
 	}, 1000);
+
+	// Listen for clicks outside of the menu
+	if (typeof window !== 'undefined') {
+		window.addEventListener("click", handleClick);
+	}
 </script>
+
 
 <nav class:isAnimated={isAnimated}>
 	<div class="logo">
@@ -24,8 +37,9 @@
 	</div>
 	<div class="menu">
 		<ul class={showMenu ? "show" : ""}>
-			<li><a href="/about">About</a></li>
-			<li><a href="/projects">Projects</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 		<div
 			class="hamburger"
@@ -41,6 +55,7 @@
 </nav>
 
 <style>
+
 	nav {
 		display: flex;
 		align-items: left;
@@ -49,7 +64,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background-color: linear-gradient(180deg, rgb(44, 44, 44), rgba(44, 44, 44, 0));
+		background: linear-gradient(rgb(22, 22, 22), rgba(22, 22, 22, 0));
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		z-index: 1000;
 		transition: transform 0.5s ease-in-out;
@@ -93,7 +108,7 @@
 
 	a {
 		text-decoration: none;
-		color: #222;
+		color: #bebebe;
 		font-size: 1rem;
 		font-weight: bold;
 		letter-spacing: 1px;
