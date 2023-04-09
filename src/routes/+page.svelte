@@ -1,88 +1,7 @@
 <script>
 	import ProjectCard from "./ProjectCard.svelte";
 	import YoutubeBackground from "./YoutubeBackground.svelte";
-
-	let projects = [
-		{
-			title: "Morning coffee",
-			link: "https://daverinoe.itch.io/morning-coffee",
-			image: "game_images/morning_coffee.png",
-			alt: "A happy canvas bag of coffee with a bloodstain in the corner.",
-			description: "A brief parable about coffee.",
-			// Add more information if needed
-		},
-		{
-			title: "Rail Assembly",
-			link: "https://daverinoe.itch.io/rail-assembly",
-			image: "game_images/rail_assembly.png",
-			alt: "Train waiting on rails.",
-			description:
-				"Move track pieces in front of your train to prevent disaster.",
-			// Add more information if needed
-		},
-		{
-			title: "Pizza Delivery",
-			link: "https://daverinoe.itch.io/pizza-delivery",
-			image: "game_images/pizza_delivery.png",
-			alt: "Pizza box with a logo of a goat on it.",
-			description:
-				"A totally normal game about delivering a pizza to a hedge maze at night.",
-			// Add more information if needed
-		},
-		{
-			title: "Alarm Cluck",
-			link: "https://daverinoe.itch.io/alarm-cluck",
-			image: "game_images/alarm_cluck.png",
-			alt: "A pixel art rooster.",
-			description:
-				"Waking the farm is your duty in this Jump King clone.",
-			// Add more information if needed
-		},
-		{
-			title: "God's Gambit",
-			link: "https://velopman.itch.io/gods-gambit",
-			image: "game_images/gods_gambit.png",
-			alt: "A fresco of an Incan god.",
-			description:
-				"Take on the Gods to become the True God of Gaming in this twist on a classic.",
-			// Add more information if needed
-		},
-		{
-			title: "Unfinished bull game",
-			link: "https://daverinoe.itch.io/uubtgwueuraattdtsy",
-			image: "game_images/bull_game.png",
-			alt: "A low-poly bull.",
-			description:
-				"Take revenge on a thief who dared to steal from you in a pottery store.",
-			// Add more information if needed
-		},
-		{
-			title: "The Huggen",
-			link: "https://velopman.itch.io/the-huggen",
-			image: "game_images/the_huggen.png",
-			alt: "A squid with its tentacles outreached.",
-			description:
-				"Spread your love to the ships above in this QWOP inspired game.",
-			// Add more information if needed
-		},
-		{
-			title: "PHD: Printer Hate Department",
-			link: "https://liioni.itch.io/phd",
-			image: "game_images/phd.png",
-			alt: "A pixel art man",
-			description: "Debug the world with this puzzle platformer!",
-			// Add more information if needed
-		},
-		{
-			title: "No Thyme to Waste",
-			link: "https://daverinoe.itch.io/no-thyme-to-waste",
-			image: "game_images/no_thyme_to_waste.png",
-			alt: "A pixel art fish",
-			description:
-				"Save the world one sale at a time in this aquaponics inspired game.",
-			// Add more information if needed
-		},
-	];
+	import { projects } from "./projects";
 
 	let selectedProject = null;
 
@@ -143,7 +62,6 @@
 			{#each projects as project, index}
 				<ProjectCard
 					{project}
-					id={index}
 					selected={selectedProject === index}
 					on:click={() => handleCardClick(index)}
 				/>
@@ -197,6 +115,6 @@
 			0,
 			0,
 			0.5
-		); /* Add a semi-transparent background color */
+		); 
 	}
 </style>
