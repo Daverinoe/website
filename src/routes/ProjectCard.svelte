@@ -81,6 +81,9 @@
         transition: all 0.5s ease;
         width: 15vw;
         height: 11.9vw;
+        /* Force minimum size in correct aspect ratio so the cards don't get too small on smaller screens*/
+        min-width: 200px;
+        min-height: 159px;
     }
 
     .Game:not(selected):hover {
@@ -167,8 +170,8 @@
         overflow: auto;
         padding: 10px;
         border-radius: 0 0 32px 32px;
-        background-color: #ffffff;
-        color: black;
+        background-color: #1a2847;
+        color: #f0f4f3;
     }
 
     .more-info.open {
@@ -178,6 +181,21 @@
     .more-info.initial {
         transform: translateY(110%);
         opacity: 0;
+    }
+
+    .more-info img {
+        border-radius: 16px;
+    }
+
+    .more-info h2 {
+        font-size: 1.5em;
+        color: #f0f4f3;
+        padding-top: 1vh;
+    }
+
+    .more-info p {
+        color: #f0f4f3;
+        padding-top: 1vh;
     }
 
     .spacer {
@@ -199,6 +217,10 @@
     @media (min-width: 601px) and (max-width: 1024px) {
         .banner {
             transform: scaleX(0.02);
+        }
+
+        .more-info {
+            flex-direction: column;
         }
     }
 </style>

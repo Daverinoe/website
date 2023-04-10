@@ -13,46 +13,48 @@
 <YoutubeBackground />
 <div class="spacer" />
 <div class="content">
-	<section id="about">
-		<div class="text-column">
-			<h1>Who is Daverinoe?</h1>
-
+	<section class="about">
+		<div class="section-highlight">
+			<div class="text-column">
+				<h1>Who is Daverinoe?</h1>
+			</div>
+		</div>
+		<div class="text-column section-normal">
 			<p>
-				I have had a rather round about path in life. My biggest career
-				accomplishments so far have been graduating with a PhD in
-				computational quantum information, then moving into a software
-				engineer position. But over the past year or two, I've really
-				decided on what my hobby should be:
+				My journey in life has taken many interesting turns. Some of my
+				most significant career accomplishments include obtaining a PhD
+				in computational quantum information and working as a software
+				engineer. Over the past couple of years, I've discovered my true
+				passion:
 			</p>
 
 			<p class="shaky">GAME DEVELOPMENT!</p>
 
 			<p>
-				I, like many many others, decided "Hey, games are fun to play! I
-				bet they're fun to make!" and gave it a go. To my absolute
-				delight, the challenges involved in game development are
-				incredibly fun to work on, and give me a real sense of
-				satisfaction to solve. From gameplay programming and making the
-				perfect feeling character controller, creating audio solutions
-				that meet the needs of the game, to bashing my head repeatedly
-				against the unyielding brick wall that is shader code.
+				Like many others, I thought, "Games are fun to play, so they
+				must be fun to make!" and decided to give it a try. To my
+				delight, the challenges involved in game development proved to
+				be incredibly enjoyable and satisfying. I've tackled everything
+				from gameplay programming and creating the perfect character
+				controller, to designing audio solutions and grappling with
+				shader code.
 			</p>
 
-			<p>I enjoy all of it.</p>
+			<p>I enjoy every aspect of it.</p>
 
 			<p>
-				So where's the proof? The proof, dear readers, is in my <a
+				Curious about my work? You can find the proof in my <a
 					href="#projects">Projects</a
-				> page. There, you'll find pages on every project I worked on, and
-				a brief post-mortem of the challenges I overcame, and the problems
-				I didn't. These are, one and all (as of writing on March 2023), game-jam
-				games. A couple of my projects have promise to become full-fledged
-				releases with proper polish, but that remains to be seen.
+				> page, where I detail my experiences working on each game and discuss
+				the challenges I've overcome as well as the problems I haven't. As
+				of March 2023, these are all game-jam games. Some projects have the
+				potential to become full-fledged releases with proper polish, but
+				only time will tell.
 			</p>
 
 			<p>
-				So enjoy, dear reader (and dare I say, friend?). I hope the walk
-				through my game development career is enlightening for you!
+				I hope you find my journey through game development both
+				enjoyable and enlightening!
 			</p>
 		</div>
 	</section>
@@ -86,11 +88,11 @@
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-		color: #F0F4F3;
+		color: #f0f4f3;
 		text-align: center;
-		background-color: #1A2847; /* Add your desired background color here */
-		min-height: 100vh; /* Make sure the content takes up at least the full viewport height */
-		width: 100%; /* Make the content take up the full width of the viewport */
+		background-color: #1a2847;
+		min-height: 100vh; 
+		width: 100%; 
 	}
 
 	.spacer {
@@ -101,7 +103,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		max-width: 1500px; 
+		max-width: 1500px;
 		margin: 0 auto;
 	}
 
@@ -112,6 +114,21 @@
 		width: 100%;
 		height: 100%;
 		z-index: 9;
-		background-color: #1a284788;
+		background-color: #000000ad;
 	}
+
+	.section-highlight {
+		width: 100vw;
+		background-color: #28578d;
+		padding: 1rem;
+		border-radius: 8px;
+	}
+
+	.section-normal {
+		background-color: #1a2847;
+		padding: 2vw 10vw 2vw 10vw;
+		border-radius: 8px;
+		font-size: large;
+	}
+
 </style>
