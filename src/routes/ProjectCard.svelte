@@ -44,7 +44,7 @@
     tabindex="-1"
     on:click={handleClick}
     on:keydown={handleKeyDown}
-    style="background-image: url({project.image}); background-size: cover; background-repeat: no-repeat;"
+    style="background-image: url({project.image}); background-size: contain; background-repeat: no-repeat;"
 />
 
 <div class="center-card" class:open={selected && isDrawerOpen}>
@@ -73,14 +73,14 @@
         opacity: 0.6;
         flex-direction: column;
         position: relative;
-        background-color: #ffffff;
+        background-color: #dddddd;
         border-radius: 16px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin: 2vw;
         padding: 0px;
         transition: all 0.5s ease;
         width: 15vw;
-        height: 15vw;
+        height: 11.9vw;
     }
 
     .Game:not(selected):hover {
@@ -141,7 +141,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 1);
+        background-color: rgb(255, 255, 255);
         opacity: 1;
         transition: opacity 1s ease;
         transition-delay: 0.5s;
@@ -163,7 +163,7 @@
         bottom: 0;
         transform: translateY(100%);
         transition: transform 0.5s ease;
-        transition-delay: 0.5s;
+        transition-delay: 0s;
         overflow: auto;
         padding: 10px;
         border-radius: 0 0 32px 32px;
@@ -176,11 +176,29 @@
     }
 
     .more-info.initial {
-        transform: translateY(100%);
+        transform: translateY(110%);
         opacity: 0;
     }
 
     .spacer {
         width: 0;
+    }
+
+    /* Smaller screens */
+    @media (max-width: 600px) {
+        .banner {
+            transform: scaleX(0.03);
+        }
+
+        .more-info {
+            flex-direction: column;
+        }
+    }
+
+    /* Medium screens */
+    @media (min-width: 601px) and (max-width: 1024px) {
+        .banner {
+            transform: scaleX(0.02);
+        }
     }
 </style>

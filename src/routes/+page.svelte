@@ -86,9 +86,9 @@
 		flex-direction: column;
 		justify-content: space-around;
 		align-items: center;
-		color: white;
+		color: #F0F4F3;
 		text-align: center;
-		background-color: #4a6d8c; /* Add your desired background color here */
+		background-color: #1A2847; /* Add your desired background color here */
 		min-height: 100vh; /* Make sure the content takes up at least the full viewport height */
 		width: 100%; /* Make the content take up the full width of the viewport */
 	}
@@ -100,7 +100,9 @@
 	.games {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: space-around;
+		max-width: 1500px; 
+		margin: 0 auto;
 	}
 
 	.overlay {
@@ -110,11 +112,6 @@
 		width: 100%;
 		height: 100%;
 		z-index: 9;
-		background-color: rgba(
-			0,
-			0,
-			0,
-			0.5
-		); 
+		background-color: #1a284788;
 	}
 </style>

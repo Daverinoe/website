@@ -64,7 +64,7 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		background: linear-gradient(rgb(22, 22, 22), rgba(22, 22, 22, 0));
+		background: linear-gradient(#1A2847, #1A284700);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 		z-index: 1000;
 		transition: transform 0.5s ease-in-out;
@@ -82,11 +82,11 @@
 		align-items: center;
 		font-size: 1.5rem;
 		font-weight: bold;
-		color: #222;
+		color: #F0F4F3;
 	}
 
 	.highlight {
-		color: #f57c00;
+		color: #328BE3;
 		margin-right: 0px;
 	}
 
@@ -108,7 +108,7 @@
 
 	a {
 		text-decoration: none;
-		color: #bebebe;
+		color: #F0F4F3;
 		font-size: 1rem;
 		font-weight: bold;
 		letter-spacing: 1px;
@@ -116,7 +116,7 @@
 	}
 
 	a:hover {
-		color: #f57c00;
+		color: #328BE3;
 	}
 
 	.hamburger {
@@ -131,7 +131,7 @@
 	.hamburger div {
 		width: 25px;
 		height: 3px;
-		background-color: #222;
+		background-color: #F0F4F3;
 		margin: 5px;
 		transition: all 0.3s ease-in-out;
 	}
