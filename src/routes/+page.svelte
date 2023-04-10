@@ -24,11 +24,29 @@
 				My journey in life has taken many interesting turns. Some of my
 				most significant career accomplishments include obtaining a PhD
 				in computational quantum information and working as a software
-				engineer. Over the past couple of years, I've discovered my true
-				passion:
+				engineer. However, over the past couple of years, I've
+				discovered a real passion:
 			</p>
 
-			<p class="shaky">GAME DEVELOPMENT!</p>
+			<p class="shaky">
+				<span style="--char-index:1;">G</span>
+				<span style="--char-index:2;">A</span>
+				<span style="--char-index:3;">M</span>
+				<span style="--char-index:4;">E</span>
+				<span style="--char-index:5;" />
+				<span style="--char-index:6;">D</span>
+				<span style="--char-index:7;">E</span>
+				<span style="--char-index:8;">V</span>
+				<span style="--char-index:9;">E</span>
+				<span style="--char-index:10;">L</span>
+				<span style="--char-index:11;">O</span>
+				<span style="--char-index:12;">P</span>
+				<span style="--char-index:13;">M</span>
+				<span style="--char-index:14;">E</span>
+				<span style="--char-index:15;">N</span>
+				<span style="--char-index:16;">T</span>
+				<span style="--char-index:17;">!</span>
+			</p>
 
 			<p>
 				Like many others, I thought, "Games are fun to play, so they
@@ -43,9 +61,9 @@
 			<p>I enjoy every aspect of it.</p>
 
 			<p>
-				Curious about my work? You can find the proof in my <a
+				Curious about my work? You can find the proof in my list of <a
 					href="#projects">Projects</a
-				> page, where I detail my experiences working on each game and discuss
+				>, where I detail my experiences working on each game and discuss
 				the challenges I've overcome as well as the problems I haven't. As
 				of March 2023, these are all game-jam games. Some projects have the
 				potential to become full-fledged releases with proper polish, but
@@ -91,8 +109,8 @@
 		color: #f0f4f3;
 		text-align: center;
 		background-color: #1a2847;
-		min-height: 100vh; 
-		width: 100%; 
+		min-height: 100vh;
+		width: 100%;
 	}
 
 	.spacer {
@@ -131,4 +149,34 @@
 		font-size: large;
 	}
 
+	/* Shaky text */
+	.shaky span {
+		display: inline-block;
+		animation-name: wave;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
+	}
+
+	.shaky span:nth-child(odd) {
+		animation-direction: alternate;
+	}
+
+	.shaky span:nth-child(even) {
+		animation-direction: alternate-reverse;
+	}
+
+	.shaky span {
+		animation-delay: calc(0.1s * var(--char-index));
+	}
+
+	@keyframes wave {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+	}
 </style>
