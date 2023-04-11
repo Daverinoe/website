@@ -13,7 +13,7 @@
 <YoutubeBackground />
 <div class="spacer" />
 <div class="content">
-	<section class="about">
+	<section class="about" id="about">
 		<div class="section-highlight">
 			<div class="text-column">
 				<h1>Who is Daverinoe?</h1>
