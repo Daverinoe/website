@@ -204,6 +204,8 @@
     .more-info p {
         color: #f0f4f3;
         padding-bottom: 2vh;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
     .spacer {
