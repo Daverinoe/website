@@ -32,7 +32,7 @@
 
 <nav class:isAnimated>
 	<div class="logo">
-		<span class="highlight"><a href='#top'>Dave</a></span>rinoe
+		<span class="highlight"><a href='#page-top'>Dave</a></span>rinoe
 	</div>
 	<div class="menu">
 		<ul class={showMenu ? "show" : ""}>

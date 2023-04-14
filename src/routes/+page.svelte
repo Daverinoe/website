@@ -10,7 +10,7 @@
 	}
 </script>
 
-<div class="top"></div>
+<section class="page-top"></section>
 <YoutubeBackground />
 <div class="spacer" />
 <div class="content">
@@ -118,7 +118,7 @@
 		height: 66.67vh;
 	}
 
-	.top {
+	.page-top {
 		visibility: hidden;
 	}
 
