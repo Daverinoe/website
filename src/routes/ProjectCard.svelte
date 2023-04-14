@@ -57,7 +57,7 @@
         class:open={isMoreInfoVisible}
         class:initial={!isMoreInfoVisible}
     >
-        <img src={project.screenshot} alt={project.alt} />
+        <img class="screenshot" src={project.screenshot} alt={project.alt} />
         <div>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
@@ -76,14 +76,16 @@
         background-color: #dddddd;
         border-radius: 16px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin: 2vw;
+        margin: 1vw;
         padding: 0px;
         transition: all 0.5s ease;
         width: 15vw;
         height: 11.9vw;
         /* Force minimum size in correct aspect ratio so the cards don't get too small on smaller screens*/
         min-width: 200px;
+        max-width: 300px;
         min-height: 159px;
+        max-height: 239px;
     }
 
     .Game:not(selected):hover {
@@ -183,8 +185,10 @@
         opacity: 0;
     }
 
-    .more-info img {
+    .screenshot {
         border-radius: 16px;
+        width: auto;
+        height: 100%;
     }
 
     .more-info h2 {
@@ -207,10 +211,6 @@
         .banner {
             transform: scaleX(0.03);
         }
-
-        .more-info {
-            flex-direction: column;
-        }
     }
 
     /* Medium screens */
@@ -218,9 +218,18 @@
         .banner {
             transform: scaleX(0.02);
         }
+    }
 
+    @media (max-width: 1024px){
         .more-info {
             flex-direction: column;
+            align-items: center;
+        }
+
+        .screenshot {
+            border-radius: 16px;
+            width: 75%;
+            height: auto;
         }
     }
 </style>

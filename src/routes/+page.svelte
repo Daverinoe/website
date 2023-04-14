@@ -121,8 +121,8 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		max-width: 1500px;
-		margin: 0 auto;
+		max-width: 1200px;
+		/* margin: 0 auto; */
 	}
 
 	.overlay {
