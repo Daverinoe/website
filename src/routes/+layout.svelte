@@ -11,7 +11,7 @@
 	</main>
 
 	<footer>
-		<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+		<p>Copyright Daverinoe 2023</p>
 	</footer>
 </div>
 
@@ -39,10 +39,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
+		background-color: #1a2847;
 	}
 
 	@media (min-width: 480px) {

@@ -59,7 +59,7 @@
     >
         <img class="screenshot" src={project.screenshot} alt={project.alt} />
         <div>
-            <h2>{project.title}</h2>
+            <h2><a href={project.link} target="_blank" rel="noopener noreferrer">{project.title}</a></h2>
             <p>{project.description}</p>
             <h3>Role</h3>
             <p>{project.role}</p>

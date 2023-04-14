@@ -166,7 +166,7 @@
 			background-color: #1a2847;
 		}
 
-		a {
+		.menu-item a {
 			padding: 10px;
 			display: block;
 			text-align: center;
@@ -174,9 +174,8 @@
 			transition: all 0.3s ease-in-out;
 		}
 
-		a:hover {
-			color: #f57c00;
-			background-color: #f5f5f5;
+		.menu-item a:hover {
+			background-color: #f5f5f54c;
 		}
 
 		.show {

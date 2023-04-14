@@ -10,7 +10,7 @@
 	}
 </script>
 
-<section class="page-top" id="page-top"></section>
+<section class="page-top" id="page-top" />
 <YoutubeBackground />
 <div class="spacer" />
 <div class="content">
@@ -64,11 +64,11 @@
 			<p>
 				Curious about my work? You can find the proof in my list of <a
 					href="#projects">Projects</a
-				>, where I detail my experiences working on each game and discuss
-				the challenges I've overcome as well as the problems I haven't. As
-				of March 2023, these are all game-jam games. Some projects have the
-				potential to become full-fledged releases with proper polish, but
-				only time will tell.
+				>, where I detail my experiences working on each game and
+				discuss the challenges I've overcome as well as the problems I
+				haven't. As of March 2023, these are all game-jam games. Some
+				projects have the potential to become full-fledged releases with
+				proper polish, but only time will tell.
 			</p>
 
 			<p>
@@ -78,7 +78,12 @@
 		</div>
 	</section>
 
-	<section id="projects">
+	<section id="projects" class="projects">
+		<div class="section-highlight">
+			<div class="text-column">
+				<h1>Projects</h1>
+			</div>
+		</div>
 		<div class="games">
 			{#each projects as project, index}
 				<ProjectCard
@@ -90,7 +95,16 @@
 		</div>
 	</section>
 
-	<section id="contact" />
+	<section id="contact">
+		<div class="section-highlight">
+			<div class="text-column">
+				<h1>Contact</h1>
+			</div>
+		</div>
+		<div class="text-column contact">
+			Contact system coming soon!
+		</div>
+	</section>
 </div>
 {#if selectedProject !== null}
 	<div
@@ -173,6 +187,17 @@
 
 	.shaky span {
 		animation-delay: calc(0.1s * var(--char-index));
+	}
+
+	.projects {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.contact {
+		padding-top: 2vh;
+		padding-bottom: 2vh;
 	}
 
 	@keyframes wave {
