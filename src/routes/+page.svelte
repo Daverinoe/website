@@ -10,7 +10,7 @@
 	}
 </script>
 
-<section class="page-top"></section>
+<section class="page-top" id="page-top"></section>
 <YoutubeBackground />
 <div class="spacer" />
 <div class="content">
