@@ -32,7 +32,7 @@
 
 <nav class:isAnimated>
 	<div class="logo">
-		<span class="highlight">Dave</span>rinoe
+		<span class="highlight"><a href='#top'>Dave</a></span>rinoe
 	</div>
 	<div class="menu">
 		<ul class={showMenu ? "show" : ""}>
@@ -84,7 +84,7 @@
 		color: #f0f4f3;
 	}
 
-	.highlight {
+	.highlight a {
 		color: #328be3;
 		margin-right: 0px;
 	}
@@ -106,7 +106,7 @@
 		margin-right: 20px;
 	}
 
-	a {
+	.menu-item a {
 		text-decoration: none;
 		color: #f0f4f3;
 		font-size: 1rem;

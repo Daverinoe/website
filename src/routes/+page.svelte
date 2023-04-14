@@ -10,6 +10,7 @@
 	}
 </script>
 
+<div class="top"></div>
 <YoutubeBackground />
 <div class="spacer" />
 <div class="content">
@@ -115,6 +116,10 @@
 
 	.spacer {
 		height: 66.67vh;
+	}
+
+	.top {
+		visibility: hidden;
 	}
 
 	.games {

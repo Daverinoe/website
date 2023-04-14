@@ -61,6 +61,10 @@
         <div>
             <h2>{project.title}</h2>
             <p>{project.description}</p>
+            <h3>Role</h3>
+            <p>{project.role}</p>
+            <h3>Challenges and Lessons</h3>
+            <p>{project.challenges}</p>
         </div>
         <div class="spacer" />
     </div>
@@ -199,7 +203,7 @@
 
     .more-info p {
         color: #f0f4f3;
-        padding-top: 1vh;
+        padding-bottom: 2vh;
     }
 
     .spacer {
