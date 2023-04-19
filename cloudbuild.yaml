@@ -1,20 +1,31 @@
- steps:
- # Build the container image
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['build', '-t', 'gcr.io/rts-game-379909/website:$COMMIT_SHA', '.']
- # Push the container image to Container Registry
- - name: 'gcr.io/cloud-builders/docker'
-   args: ['push', 'gcr.io/rts-game-379909/website:$COMMIT_SHA']
- # Deploy container image to Cloud Run
- - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-   entrypoint: gcloud
-   args:
-   - 'run'
-   - 'deploy'
-   - 'website'
-   - '--image'
-   - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
-   - '--region'
-   - 'europe-north1'
- images:
- - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
+steps:
+  # Retrieve the service account email from Secret Manager
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'gcloud secrets versions access latest --secret=load_balancer_service_account_email > /workspace/service_account_email.txt'
+
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/rts-game-379909/website:$COMMIT_SHA', '.']
+  # Push the container image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/rts-game-379909/website:$COMMIT_SHA']
+  # Deploy container image to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'website'
+      - '--image=gcr.io/rts-game-379909/website:$COMMIT_SHA'
+      - '--region=europe-north1'
+      - '--platform=managed'
+      - '--allow-unauthenticated'
+      - '--set-traffic=website=100'
+      - '--update-traffic'
+      - '--service-account=$(cat /workspace/service_account_email.txt)'
+      - '--ingress=internal-and-cloud-load-balancing'
+images:
+  - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
