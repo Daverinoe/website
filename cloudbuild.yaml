@@ -1,14 +1,8 @@
 steps:
-  # Retrieve the service account email from Secret Manager
-  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-    entrypoint: 'bash'
-    args:
-      - '-c'
-      - 'gcloud secrets versions access latest --secret=BALANCER_SERVICE_EMAIL > /workspace/service_account_email.txt'
-
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/rts-game-379909/website:$COMMIT_SHA', '.']
+    secretEnv: ['BALANCER_SERVICE_EMAIL']
   # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/rts-game-379909/website:$COMMIT_SHA']
@@ -27,3 +21,9 @@ steps:
       - '--ingress=internal-and-cloud-load-balancing'
 images:
   - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
+
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/$PROJECT_ID/secrets/BALANCER_SERVICE_EMAIL/versions/latest
+      env: 'BALANCER_SERVICE_EMAIL'
