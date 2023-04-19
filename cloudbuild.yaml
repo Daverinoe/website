@@ -17,7 +17,7 @@ steps:
       - '--region=europe-north1'
       - '--platform=managed'
       - '--allow-unauthenticated'
-      - '--service-account=$(cat /workspace/service_account_email.txt)'
+      - '--service-account=$$BALANCER_SERVICE_EMAIL'
       - '--ingress=internal-and-cloud-load-balancing'
 images:
   - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
