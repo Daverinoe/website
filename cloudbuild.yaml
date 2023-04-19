@@ -16,7 +16,7 @@ steps:
       - '--region=europe-north1'
       - '--platform=managed'
       - '--allow-unauthenticated'
-      - '--service-account=$$BALANCER_SERVICE_EMAIL'
+      - '--service-account=$BALANCER_SERVICE_EMAIL'
       - '--ingress=internal-and-cloud-load-balancing'
     secretEnv: ['BALANCER_SERVICE_EMAIL']
 images:
