@@ -14,8 +14,5 @@ steps:
       - 'website'
       - '--image=gcr.io/rts-game-379909/website:$COMMIT_SHA'
       - '--region=europe-north1'
-      - '--platform=managed'
-      - '--service-account=daverinoe-load-balancer@rts-game-379909.iam.gserviceaccount.com'
-      - '--ingress=internal-and-cloud-load-balancing'
 images:
   - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
