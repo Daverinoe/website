@@ -23,8 +23,6 @@ steps:
       - '--region=europe-north1'
       - '--platform=managed'
       - '--allow-unauthenticated'
-      - '--set-traffic=website=100'
-      - '--update-traffic'
       - '--service-account=$(cat /workspace/service_account_email.txt)'
       - '--ingress=internal-and-cloud-load-balancing'
 images:
