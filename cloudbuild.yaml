@@ -4,7 +4,7 @@ steps:
     entrypoint: 'bash'
     args:
       - '-c'
-      - 'gcloud secrets versions access latest --secret=load_balancer_service_account_email > /workspace/service_account_email.txt'
+      - 'gcloud secrets versions access latest --secret=BALANCER_SERVICE_EMAIL > /workspace/service_account_email.txt'
 
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
