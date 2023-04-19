@@ -2,7 +2,6 @@ steps:
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/rts-game-379909/website:$COMMIT_SHA', '.']
-    secretEnv: ['BALANCER_SERVICE_EMAIL']
   # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push', 'gcr.io/rts-game-379909/website:$COMMIT_SHA']
@@ -19,6 +18,7 @@ steps:
       - '--allow-unauthenticated'
       - '--service-account=$$BALANCER_SERVICE_EMAIL'
       - '--ingress=internal-and-cloud-load-balancing'
+    secretEnv: ['BALANCER_SERVICE_EMAIL']
 images:
   - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
 
