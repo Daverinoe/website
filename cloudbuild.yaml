@@ -16,5 +16,7 @@ steps:
   - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
   - '--region'
   - 'europe-north1'
+  - '--service-account'
+  - '485505940378@cloudbuild.gserviceaccount.com'
 images:
 - 'gcr.io/rts-game-379909/website:$COMMIT_SHA'
