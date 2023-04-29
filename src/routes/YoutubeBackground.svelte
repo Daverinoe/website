@@ -17,13 +17,13 @@
             player = new YT.Player("player", {
                 height: "100%",
                 width: "100%",
-                videoId: "hRrBnI5L0u8",
+                videoId: "C6uTPLITspg",
                 playerVars: {
                     autoplay: 1,
                     controls: 0,
                     modestbranding: 1,
                     loop: 1,
-                    playlist: "hRrBnI5L0u8",
+                    playlist: "C6uTPLITspg",
                     showinfo: 0,
                     rel: 0,
                     mute: 1,

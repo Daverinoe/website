@@ -13,6 +13,17 @@ export interface Project {
 
 export const projects: Project[] = [
     {
+        title: "Hexbound Nightmare",
+        link: "https://daverinoe.itch.io/hexbound-nightmare",
+        image: "game_images/hexbound_nightmare.png",
+        banner_image: "game_images/hexbound_banner.png",
+        screenshot: "game_images/hexbound_screenshot.png",
+        alt: "Cryptic red runes lie on a floating hexagonal slate. A dark, atmospheric tree is visible in the background. There is fog obscuring everything else, but the roiling dark cloudy sky.",
+        description: "A brief parable about coffee. This game started as a response to my own coffee machine, which was forever making demands of being refilled with water, or to empty the coffee grounds.",
+        role: "For this game, I did everything except the music, except the tree model. Level design, programming, SFX foley, all the models except the hand and skull (which I modified quite extensively).",
+        challenges: "It seems I didn't learn from my last game, and once again solo developed a game with a lot of scope. The greatest challenge, though, was properly tackling the modelling. My new favourite thing is geometry nodes in Blender, that's what's responsible for the amazing hexagon based landscape. Though I didn't model the hand or the skull myself, I did extensively modify the base models they came from, and animated the hand myself.",
+    },
+    {
         title: "Morning coffee",
         link: "https://daverinoe.itch.io/morning-coffee",
         image: "game_images/morning_coffee.png",
