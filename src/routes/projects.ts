@@ -19,7 +19,7 @@ export const projects: Project[] = [
         banner_image: "game_images/hexbound_banner.webp",
         screenshot: "game_images/hexbound_screenshot.webp",
         alt: "Cryptic red runes lie on a floating hexagonal slate. A dark, atmospheric tree is visible in the background. There is fog obscuring everything else, but the roiling dark cloudy sky.",
-        description: "A brief parable about coffee. This game started as a response to my own coffee machine, which was forever making demands of being refilled with water, or to empty the coffee grounds.",
+        description: "An atmospheric walking simulator, where you need to find a way to unlock the way out. Beware though, for not all is as it seems.",
         role: "For this game, I did everything except the music, except the tree model. Level design, programming, SFX foley, all the models except the hand and skull (which I modified quite extensively).",
         challenges: "It seems I didn't learn from my last game, and once again solo developed a game with a lot of scope. The greatest challenge, though, was properly tackling the modelling. My new favourite thing is geometry nodes in Blender, that's what's responsible for the amazing hexagon based landscape. Though I didn't model the hand or the skull myself, I did extensively modify the base models they came from, and animated the hand myself.",
     },
