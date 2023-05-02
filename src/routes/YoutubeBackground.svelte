@@ -1,3 +1,8 @@
+<svelte:head>
+  <link rel="preconnect" href="https://www.youtube.com" />
+  <link rel="preconnect" href="https://www.googlevideo.com" />
+</svelte:head>
+
 <script lang="ts">
     import { onMount } from "svelte";
 
