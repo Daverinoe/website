@@ -86,10 +86,10 @@
         width: 15vw;
         height: 11.9vw;
         /* Force minimum size in correct aspect ratio so the cards don't get too small on smaller screens*/
-        min-width: 200px;
-        max-width: 300px;
-        min-height: 159px;
-        max-height: 239px;
+        min-width: 201px;
+        max-width: 302px;
+        min-height: 160px;
+        max-height: 240px;
     }
 
     .Game:not(selected):hover {

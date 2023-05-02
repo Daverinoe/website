@@ -12,7 +12,6 @@
 
 <section class="page-top" id="page-top" />
 <YoutubeBackground />
-<div class="spacer" />
 <div class="content">
 	<section class="about" id="about">
 		<div class="section-highlight">
@@ -126,10 +125,6 @@
 		background-color: #1a2847;
 		min-height: 100vh;
 		width: 100%;
-	}
-
-	.spacer {
-		height: 66.67vh;
 	}
 
 	.page-top {
