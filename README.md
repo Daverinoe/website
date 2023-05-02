@@ -1,38 +1,28 @@
-# create-svelte
+# Daverinoe's Website
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+You too can host and browse my website locally!
 
-## Creating a project
+To do this, you need to have NodeJS installed, or Docker. 
 
-If you're seeing this, you've probably already done this step. Congrats!
+## NodeJS instructions
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
+NodeJS instructions are to simply run
+```js
+npm install
 npm run dev -- --open
 ```
 
-## Building
+This should run the vite build, and open a web browser to the local index.html.
 
-To create a production version of your app:
+## Docker instructions
 
-```bash
-npm run build
+For docker, the instructions are to build the image, then run the image, after which you can navigate to https://localhost:5137 in your web browser.
+
+```
+docker build -t IMAGE_NAME .
+docker container run IMAGE_NAME
 ```
 
-You can preview the production build with `npm run preview`.
+## Using this website
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Though the images and video are mine, you are very welcome to use this as a template to build your own website.
