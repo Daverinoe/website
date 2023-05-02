@@ -1,6 +1,6 @@
 <script>
 	import ProjectCard from "./ProjectCard.svelte";
-	import YoutubeBackground from "./YoutubeBackground.svelte";
+	import VideoBackground from "./VideoBackground.svelte";
 	import { projects } from "./projects";
 
 	let selectedProject = null;
@@ -11,7 +11,7 @@
 </script>
 
 <section class="page-top" id="page-top" />
-<YoutubeBackground />
+<VideoBackground />
 <div class="content">
 	<section class="about" id="about">
 		<div class="section-highlight">
